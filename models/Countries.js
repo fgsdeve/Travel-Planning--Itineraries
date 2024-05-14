@@ -1,14 +1,21 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
 class Countries extends Model {}
 
 Countries.init(
     {
-        Country: {
-            type: DataTypes.VARCHAR(100),
+        id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
+        
+          },
+        Country: {
+            type: DataTypes.STRING,
+            allowNull: false,
+           
         }
     },
     
