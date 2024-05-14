@@ -67,4 +67,4 @@ Itinerary.init(
   }
 );
 
-module.exports = itinerary;
+module.exports = Itinerary;
