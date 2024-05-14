@@ -1,0 +1,52 @@
+[{
+    "place_name": "London",
+    "country_id": 1
+},
+ 
+{
+    "place_name": "Manchester",
+    "country_id": 1
+ },
+ 
+{
+    "place_name": "Cambridge",
+    "country_id": 1
+ },
+ {
+    "place_name": "Tokyo",
+    "country_id": 2
+ },
+ {
+    "place_name": "Hiroshima",
+    "country_id": 2
+ },
+ {
+    "place_name": "Kyoto",
+    "country_id": 2
+ },
+ {
+    "place_name": "Bangkok",
+    "country_id": 3
+ },
+ {
+    "place_name": "Phuket",
+    "country_id": 3
+ },
+ {
+    "place_name": "Krabri",
+    "country_id": 3
+ },
+ {
+    "place_name": "Munich",
+    "country_id": 4
+ },
+ {
+    "place_name": "Berlin",
+    "country_id": 4
+ },
+ {
+    "place_name": "Frankfurt",
+    "country_id": 4
+ }
+
+]
