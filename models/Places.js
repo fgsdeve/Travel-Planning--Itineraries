@@ -1,18 +1,33 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
 class Places extends Model {}
 
 Places.init( 
     {
-    placeName: DataTypes.VARCHAR(100),
-    streetName: DataTypes.VARCHAR(255),
-    zipCode: DataTypes.INTEGER,
-    Country_id,
-    allowNull: false,
-    primaryKey: true
-    },
-    
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+          },
+          place_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+          },
+        
+            country_id: {
+              type: DataTypes.INTEGER,
+              allowNull: false,
+              references: {
+                  // This references the `countries` model, which we set in `countries.js` as its `modelName` property
+                  model: 'countries',
+                  key: 'id',
+                },
+            },
+           
+      
+        },
     {
         sequelize,
         timestamps: false,
