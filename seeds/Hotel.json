@@ -1,0 +1,73 @@
+[{
+    "hotel_name": "Four Sesaons  Hotel London at  Ten Trinity Square",
+    "address":"10 Trinity Square,Londo Ec3N 4AJ, United Kingdom",
+    "price":600,
+    "attraction_id": 1
+},
+{
+    "hotel_name": "Radisson Blu hotel",
+    "address":"Chicago Ave,Manchester M90 3RA,United Kingdom",
+    "price":200,
+    "attraction_id": 2
+},
+{
+    "hotel_name": "Hilton Cambridge City Centre",
+    "address":"20Dwoning st, Cambrdige CB2 3DT,united kingdom",
+    "price":200,
+    "attraction_id": 3
+},
+{
+    "hotel_name": "Capsule Hotel GLANSIT AKIHABARA",
+    "address":"4-chome-4-6 Sotokanda, Chiyoda City, Tokyo 101-0021, Japan",
+    "price":40,
+    "attraction_id": 7
+},
+{
+    "hotel_name": "Crowne Plaza - ANA Hiroshima",
+    "address":" 7-20 Nakamachi, Naka Ward, Hiroshima, 730-0037, Japan",
+    "price":60,
+    "attraction_id": 8
+},
+{
+    "hotel_name": "Kyoto Ryokan Gion Sano",
+    "address":"Japan, 605-0072 Kyoto, Higashiyama Ward,",
+    "price":260,
+    "attraction_id": 9
+},
+{
+    "hotel_name": "Avani+ Riverside Bangkok Hotel",
+    "address":"257 Charoen Nakhon Rd, Samre, Thon Buri, Bangkok 10600,Thailand",
+    "price":40,
+    "attraction_id": 10
+},
+{
+    "hotel_name": "257 Charoen Nakhon Rd, Samre, Thon Buri, Bangkok 10600",
+    "address":" Khwaeng Samre, Khet Thon Buri, Krung Thep Maha Nakhon 10600, Thailand ",
+    "price":60,
+    "attraction_id": 11
+},
+{
+    "hotel_name": "Centara Grand Beach Resort & Villas Krabi",
+    "address":"396 1, Ao Nang, Amphur Muang, Krabi 81180, Thailand",
+    "price":112,
+    "attraction_id": 12
+},
+{
+    "hotel_name": " Berlin Wall Hotel",
+    "address":"yet to share hotel name",
+    "price":40,
+    "attraction_id": 4
+},
+{
+    "hotel_name": "Marienplatz/Oktoberfest",
+    "address":" yet to share hotel name",
+    "price":60,
+    "attraction_id": 5
+},
+{
+    "hotel_name": "Palmengarten",
+    "address":"yet to share hotel name",
+    "price":112,
+    "attraction_id": 6
+}
+]
