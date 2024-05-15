@@ -1,10 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
-// create our Attraction model
 class Hotel extends Model {}
 
-// create fields/columns for Location model
 Hotel.init(
   {
     id: {
@@ -18,30 +16,27 @@ Hotel.init(
       allowNull: false
     },
     address: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      price:{
-        type: DataTypes.INTEGER,
-        allowNull: false
-      },
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     attraction_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            // This references the `attraction` model, which we set in `attraction.js` as its `modelName` property
-            model: 'Attractions',
-            key: 'id',
-          },
-      }
-
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'attractions', // Ensure this matches the case in the model definition
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
-   // freezeTableName: true,
     underscored: true,
-    modelName: 'Hotel'
+    modelName: 'hotel'
   }
 );
 

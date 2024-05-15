@@ -1,49 +1,61 @@
 const express = require('express');
-const{ Itinerary, Attractions }  = require('../models')
+const { Itinerary, Attractions } = require('../models');
+console.log(Itinerary, Attractions);
 
-const routes = express.Router();
 
-//Creating intinerary
-routes.post('/create', async (req, res) => {
-    try {
-        const newItinenary = await Itinerary.create({
-            total_cost: req.body.total_cost,
-            lengthOfStay: req.body.lengthOfStay,
-            street_name: req.body.street_name,
-            zip_code: req.body.zip_code,
-            place_id: req.body.place_id,
-            country_id: req.body.country_id,
-            attractions: req.body.place_id,
-        });
+const router = express.Router();
 
-        res.redirect('/');
-    }catch (err) {
-        res.status(500).send('Server error');
-    }
-});
-
-//edit itinenary
-
-routes.post('/edit/:id', async (req, res) => {
-    try{
-        const itinenary = await Itinerary.findOne({ where: {id: req.params.id} });
-        
-        if(!itinenary) {
-            return res.status(404).send('Itinenary not found');
-        }
-
-    await itinenary.update({
-            total_cost: req.body.total_cost,
-            lengthOfStay: req.body.lengthOfStay,
-            street_name: req.body.street_name,
-            zip_code: req.body.zip_code,
-            place_id: req.body.place_id,
-            country_id: req.body.country_id,
-            attractions: req.body.place_id,
-
+// Example route using Itinerary and Attractions
+router.post('/create', async (req, res) => {
+  try {
+    const newItinerary = await Itinerary.create({
+      total_cost: req.body.total_cost,
+      lengthOfStay: req.body.lengthOfStay,
+      street_name: req.body.street_name,
+      zip_code: req.body.zip_code,
+      place_id: req.body.place_id,
+      country_id: req.body.country_id,
+      attraction_id: req.body.attraction_id,
     });
-    res.redirect('/');
-    }catch(err) {
-        res.status(500).send('Server error');
+
+    // Use Attractions model
+    const attraction = await Attractions.findOne({ where: { id: req.body.attraction_id } });
+    if (attraction) {
+      console.log(`Itinerary created for attraction: ${attraction.attraction_name}`);
     }
+
+    res.redirect('/');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server error');
+  }
 });
+
+// Example edit route
+router.post('/edit/:id', async (req, res) => {
+  try {
+    const itinerary = await Itinerary.findOne({ where: { id: req.params.id } });
+
+    if (!itinerary) {
+      return res.status(404).send('Itinerary not found');
+    }
+
+    await itinerary.update({
+      total_cost: req.body.total_cost,
+      lengthOfStay: req.body.lengthOfStay,
+      street_name: req.body.street_name,
+      zip_code: req.body.zip_code,
+      place_id: req.body.place_id,
+      country_id: req.body.country_id,
+      attraction_id: req.body.attraction_id,
+    });
+    await itinerary.save()
+    
+    res.redirect('/');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server error');
+  }
+});
+
+module.exports = router;
