@@ -33,7 +33,7 @@ Places.init(
         timestamps: false,
        // freezeTableName: true,
         underscored: true,
-        modelName: 'Places'
+        modelName: 'places'
       }
 );
 

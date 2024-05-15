@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js/connection');
+const sequelize = require('../config/connection');
 
 // create our Attraction model
 class Itinerary extends Model {}
@@ -52,7 +52,7 @@ Itinerary.init(
         allowNull: false,
         references: {
             // This references the `attraction` model, which we set in `attraction.js` as its `modelName` property
-            model: 'attraction',
+            model: 'attractions',
             key: 'id',
           },
       },

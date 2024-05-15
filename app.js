@@ -1,12 +1,15 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
+const exphbs = require('express-handlebars'); // Ensure this is required correctly
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const helpers = require('./utils/authUtils');
+
+const authController = require('./controllers/authController');
+const userController = require('./controllers/userController');
+const itineraryController = require('./controllers/itineraryController');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -22,7 +25,6 @@ const sess = {
     db: sequelize
   })
 };
-
 
 app.use(session(sess));
 
@@ -54,8 +56,10 @@ app.get('/edit', (req, res) => {
   res.render('edit');
 });
 
-// Use existing routes
-app.use(routes);
+// Use controllers for routes
+app.use('/auth', authController);
+app.use('/user', userController);
+app.use('/itinerary', itineraryController);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

@@ -24,7 +24,7 @@ Countries.init(
         timestamps: false,
        // freezeTableName: true,
         underscored: true,
-        modelName: 'Countries'
+        modelName: 'countries'
       }
 );
 

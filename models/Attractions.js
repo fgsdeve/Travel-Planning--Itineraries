@@ -37,8 +37,7 @@ Attractions.init(
     timestamps: false,
    //freezeTableName: true,
     underscored: true,
-   
-    modelName: 'Attractions'
+    modelName: 'attractions'
   }
 );
 
