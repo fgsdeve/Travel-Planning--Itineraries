@@ -49,7 +49,8 @@ router.post('/edit/:id', async (req, res) => {
       country_id: req.body.country_id,
       attraction_id: req.body.attraction_id,
     });
-
+    await itinerary.save()
+    
     res.redirect('/');
   } catch (err) {
     console.error(err);
