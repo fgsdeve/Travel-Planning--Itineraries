@@ -48,6 +48,75 @@ Inquirer js
 
 npm install express, dotenv handlebars, axios bcryptjs, express-session connect-session-sequelize, sequelize, render.
 
+## Images Used
+
+MidJourney- 
+    This is an AI bot that generates images based on the prompts that it is given. 
+    https://www.midjourney.com/home
+    https://docs.midjourney.com/docs/en/terms-of-service
+
+Account: Samantha S. (roillena) -
+    Trip Happens Logo
+    Country Stamps (England, Germany, Japan, Thailand)
+
+
+Country Flags-
+
+    England
+    https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg
+
+    Germany
+    https://commons.wikimedia.org/wiki/File:Flag_of_Germany.svg
+
+    Japan
+    https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg
+
+    Thailand
+    https://commons.wikimedia.org/wiki/File:Flag_of_Thailand.svg?uselang=en#Licensing
+
+Unsplash
+    This is a website where users are able to get free to use images.
+    https://unsplash.com/
+    https://unsplash.com/license
+
+    All Images that were used from Unsplash were covered under the Unsplash Free license
+
+    London Bridge
+    https://unsplash.com/@bush_o_graphy
+
+    Manchester Museum
+    https://unsplash.com/@chriscurry92
+
+    University of Cambridge
+    https://unsplash.com/@malgonia_bujalsky
+
+    Berlin Wall
+    https://unsplash.com/@tinkerman
+
+    Marienplatz
+    https://unsplash.com/@danielsessler
+
+    Palmengarten
+    https://unsplash.com/@behnazyosofi
+
+    Akihabara
+    https://unsplash.com/@jezar
+
+    Peace Memorial Park
+    https://unsplash.com/@gronemo
+
+    Arashiyama Bamboo Forest
+    https://unsplash.com/@jeremy
+
+    Royal Grand Palace Bangkok
+    https://unsplash.com/@jay_5
+
+    James Bond Island
+    https://unsplash.com/@setsj
+
+    Phi Phi Islands
+    https://unsplash.com/@tbix45
+
 ## Collaboration
 Janana 
 Franc 
