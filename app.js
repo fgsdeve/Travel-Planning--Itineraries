@@ -38,9 +38,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Add routes for Handlebars views
-// app.get('/', (req, res) => {
-//   res.render('main');
-// });
+ app.get('/', (req, res) => {
+ res.render('main');
+ });
 
 // app.get('/login', (req, res) => {
 //   res.render('login');

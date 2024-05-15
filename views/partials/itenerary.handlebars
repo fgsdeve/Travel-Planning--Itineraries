@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerary</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  {{> header}}
+
+  <main class="container">
+    <h1>Itinerary</h1>
+    <div class="itinerary">
+      <div class="itinerary-details">
+        <h2> will write something here later </h2>
+        <ol>
+          <li>Country: {{country}}</li>
+          <li>City: {{city}}</li>
+          <li>Attraction: {{attraction}}</li>
+          <li>Hotel: {{hotel}}</li>
+          <li>Length of stay: {{length_of_stay}} days</li>
+          <li>Estimated cost: ${{estimated_cost}}</li>
+        </ol>
+      </div>
+      
+      <div class="itinerary-visuals">
+        <div class="flag">
+          <img src="{{country_flag_url}}" alt="Country flag">
+        </div>
+        <div class="city">
+          <img src="{{city_image_url}}" alt="City picture">
+        </div>
+        <div class="attraction">
+          <img src="{{attraction_image_url}}" alt="Attraction picture">
+        </div>
+        <div class="hotel">
+          <img src="{{hotel_image_url}}" alt="Hotel picture">
+          <p>{{hotel_info}}</p>
+        </div>
+        <div class="passport-stamp">
+          <img src="{{passport_stamp_url}}" alt="Passport stamp">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Trip Happens!</p>
+  </footer>
+
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
+  <script src="/js/script.js"></script>
+</body>
+</html>
