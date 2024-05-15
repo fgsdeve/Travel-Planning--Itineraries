@@ -1,13 +1,12 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-const exphbs = require('express-handlebars'); // Ensure this is required correctly
+const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const routes = require('./controllers');
+/* const routes = require('./controllers');*/
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
-
 const authController = require('./controllers/authController');
 const userController = require('./controllers/userController');
 const itineraryController = require('./controllers/itineraryController');
@@ -16,16 +15,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const hbs = exphbs.create({ helpers });
-
-// const sess = {
-//   secret: 'Super secret secret',
-//   cookie: {},
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
 
 
 // app.use(session(sess));
@@ -36,6 +25,16 @@ const hbs = exphbs.create({ helpers });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+}));
 
 // Add routes for Handlebars views
  app.get('/', (req, res) => {
