@@ -1,66 +1,62 @@
-
-[{
-    "attraction_name": "Tower bridge in London",
-    "street_name":"Tower Bridge Rd,London SE! 2UP, United Kingdom",
-     "place_id": 1
-},
- 
-{
-    "attraction_name": "Manchester Museum",
-    "street_name":"University of,Oxfore Rd,Manchester M13 9PL,United Kingdom",
-    "place_id":1
-
- },
- 
-{
-    "attraction_name": "University of Cambridge",
-    "street_name":"The old schools,Trinity Ln,Cambrdige CB2 1TN, United Kingdom",
-     "place_id":1
- },
- {
-   "attraction_name": "Akihabara",
-   "street_name":"Sotokanda, Chiyoda 101-0021 Tokyo",
-   "place_id":2
-},
-{
-   "attraction_name": "Peace Memorial Park",
-   "street_name":"Hiroshima, Naka Ward,Nakajimacho, Japan",
-   "place_id":2
-},
-{
-   "attraction_name": "Arashiyama Bamboo Forest",
-   "street_name":"Sagaogurayama Tabuchiyamacho,Ukyo ward,Kyota,Japan",
-   "place_id":2
-},
-{
-   "attraction_name": "Royal Grand palace Bankgkok Temples",
-   "street_name":"Phra Borom Maha Ratchawang,Phra Nakon,Bangkok,Thailand",
-   "place_id":3
-},
-{
-   "attraction_name": "James Bond Island with Canoeing",
-   "street_name":"Thailand AO Phang Nga National Park",
-   "place_id":3
-},
-{
-   "attraction_name": "JPhi Phi islands Adventure Day trip",
-   "street_name":"JPhi Phi islands",
-   "place_id":3
-},
- {
-    "attraction_name": "Berlin Wall",
-    "street_name":"west Berlin",
-    "place_id":4
- },
- {
-    "attraction_name": "Marienplatz/Oktoberfest",
-    "street_name":"Marienplatz, 80331 Munchen, Germany",
-    "place_id":4
- },
- {
-    "attraction_name": "Palmengarten",
-    "street_name":"Palmengarten der Stadt,SiesmayerstrBe 63,60323 Frank am main,Germany",
-    "place_id":4
- }
-
+[
+    {
+        "attraction_name": "Tower bridge in London",
+        "street_name": "Tower Bridge Rd, London SE1 2UP, United Kingdom",
+        "place_id": 1
+    },
+    {
+        "attraction_name": "Manchester Museum",
+        "street_name": "University of, Oxford Rd, Manchester M13 9PL, United Kingdom",
+        "place_id": 3
+    },
+    {
+        "attraction_name": "University of Cambridge",
+        "street_name": "The Old Schools, Trinity Ln, Cambridge CB2 1TN, United Kingdom",
+        "place_id": 2
+    },
+    {
+        "attraction_name": "Akihabara",
+        "street_name": "Sotokanda, Chiyoda 101-0021 Tokyo",
+        "place_id": 4
+    },
+    {
+        "attraction_name": "Peace Memorial Park",
+        "street_name": "Hiroshima, Naka Ward, Nakajimacho, Japan",
+        "place_id": 5
+    },
+    {
+        "attraction_name": "Arashiyama Bamboo Forest",
+        "street_name": "Sagaogurayama Tabuchiyamacho, Ukyo Ward, Kyoto, Japan",
+        "place_id": 6
+    },
+    {
+        "attraction_name": "Royal Grand Palace Bangkok Temples",
+        "street_name": "Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok, Thailand",
+        "place_id": 7
+    },
+    {
+        "attraction_name": "James Bond Island with Canoeing",
+        "street_name": "Thailand, Ao Phang Nga National Park",
+        "place_id": 8
+    },
+    {
+        "attraction_name": "Phi Phi Islands Adventure Day Trip",
+        "street_name": "Phi Phi Islands, Thailand",
+        "place_id": 9
+    },
+    {
+        "attraction_name": "Berlin Wall",
+        "street_name": "West Berlin, Germany",
+        "place_id": 10
+    },
+    {
+        "attraction_name": "Marienplatz/Oktoberfest",
+        "street_name": "Marienplatz, 80331 München, Germany",
+        "place_id": 11
+    },
+    {
+        "attraction_name": "Palmengarten",
+        "street_name": "Palmengarten der Stadt, Siesmayerstraße 63, 60323 Frankfurt am Main, Germany",
+        "place_id": 12
+    }
 ]
