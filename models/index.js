@@ -38,35 +38,35 @@ Countries.belongsTo(Itinerary, {
   foreignKey: 'country_id',
 });
 
-Itinerary.hasMany(Countries, {
+Itinerary.hasOne(Countries, {
   foreignKey: 'country_id',
 });
 
 Places.belongsTo(Itinerary, {
   foreignKey: 'place_id',
 });
-Itinerary.hasMany(Places, {
+Itinerary.hasOne(Places, {
   foreignKey: 'place_id',
 });
 
 Attractions.belongsTo(Itinerary, {
   foreignKey: 'attraction_id',
 });
-Itinerary.hasMany(Attractions, {
+Itinerary.hasOne(Attractions, {
   foreignKey: 'attraction_id',
 });
 
 Hotels.belongsTo(Itinerary, {
   foreignKey: 'hotel_id',
 });
-Itinerary.hasMany(Hotels, {
+Itinerary.hasOne(Hotels, {
   foreignKey: 'hotel_id',
 });
 
 User.belongsTo(Itinerary, {
   foreignKey: 'user_id',
 });
-Itinerary.hasMany(User, {
+Itinerary.hasOne(User, {
   foreignKey: 'user_id',
 });
 

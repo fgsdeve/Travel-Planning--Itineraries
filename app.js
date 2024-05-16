@@ -25,7 +25,6 @@ const hbs = exphbs.create({ helpers });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(session({
   secret: 'Super secret secret',
   cookie: {},
@@ -37,11 +36,11 @@ app.use(session({
 }));
 
 // Add routes for Handlebars views
+app.use(routes);
  app.get('/', (req, res) => {
  res.render('main');
  });
 
- app.use(routes);
 // app.get('/login', (req, res) => {
 //   res.render('login');
 // });
