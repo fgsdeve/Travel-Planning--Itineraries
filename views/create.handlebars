@@ -1,0 +1,50 @@
+<div class="itineary-card">
+  
+  {{countries.[0].Country}}
+ {{places}}
+</div>
+
+<div class="dropdown">
+  <label>Please select a country</label>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select country--
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+   {{#each countries as | country |}}
+    <a data-id={{country.id}} class="dropdown-item" href='by/{{country.id}}'>{{country.Country}}</a>
+   {{/each}}
+  </div>
+ 
+   <label>Please select a place</label>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="PlacedropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select place--
+  </button>
+  <div class="dropdown-menu" id="PlacesdropdownMenuButton" aria-labelledby="dropdownMenuButton">
+   
+
+  
+  {{!-- </div>
+   
+  <label>Please select a attraction</label>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select attraction--
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+   {{#each countries as | country |}}
+    <a data-id={{country.id}} class="dropdown-item" href="#">{{country.Country}}</a>
+   {{/each}}
+  </div>
+  <label>Please select a hotel</label>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select hotel--
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+   {{#each countries as | country |}}
+    <a data-id={{country.id}} class="dropdown-item" href="#">{{country.Country}}</a>
+   {{/each}}
+  </div> --}}
+</div>
+<div>
+  <button id="submit">Create Itineary</button>
+</div>
+<script src="/js/create-Itinerary.js"></script>

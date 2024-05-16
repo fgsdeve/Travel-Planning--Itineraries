@@ -8,9 +8,7 @@ const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
 
-const authController = require('./controllers/authController');
-const userController = require('./controllers/userController');
-const itineraryController = require('./controllers/itineraryController');
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -58,11 +56,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 //   res.render('edit');
 // });
 
-
+app.use(routes);
 // Use controllers for routes
-app.use('/auth', authController);
-app.use('/user', userController);
-app.use('/itinerary', itineraryController);
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

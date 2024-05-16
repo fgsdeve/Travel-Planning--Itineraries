@@ -1,44 +1,41 @@
 const router = require('express').Router();
 const { Countries, Places, Attractions, Hotel } = require('../models');
 
-// router.get('/', async (req, res) => {
-//     try {
-//       // Get all users, sorted by name
-//       const countriesData = await Countries.findAll();
-  
-//       // Serialize user data so templates can read it
-//       const users = countriesData.map((project) => project.get({ plain: true }));
-  
-//       // Pass serialized data into Handlebars.js template
-//       res.render('homepage', { users });
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
 
-router.get('/', async (req, res) => {
+
+//match with get request "/countries/"
+
+router.get(['/by/:countryid','/'], async (req, res) => {
     try {
       // Get all users, sorted by name
       const countriesData = await Countries.findAll();
+
       console.table(countriesData);
-      res.status(200).json(countriesData);
+
+      const countries = countriesData.map((country) => country.get({ plain: true }));
+
+      res.render('create', { countries });
+
+      //res.status(200).json(countriesData);
     } catch (err) {
       res.status(500).json(err);
     }
   });
-
-  router.get('/:countryId', async (req, res) => {
+//match with get request "/countries/"
+  router.get('/:countryid', async (req, res) => {
     try {
       // Get all cities, for the  given country
       const placesData = await Places.findAll(
         {
-            where:{country_id:req.params.countryId}
+            where:{country_id:req.params.countryid}
         }
       );
-      console.table(placesData);
-      res.status(200).json(placesData);
+      const Places = placesData.map((place) => place.get({ plain: true }));
+
+     // res.render('create', { Places });
+      res.status(200).json({Places});
     } catch (err) {
-      res.status(500).json(err);
+      res.status(500).json(Places);
     }
   });
 
