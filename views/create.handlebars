@@ -1,12 +1,56 @@
 
-<div class="create-container">
-  <h2>Create Trip</h2>
-  <form action="/create" method="POST">
-      <input type="text" name="destination" placeholder="Destination" required>
-      <input type="date" name="startDate" placeholder="Start Date" required>
-      <input type="date" name="endDate" placeholder="End Date" required>
-      <button type="submit">Create Trip</button>
-  </form>
+<form>
+   <div class="form-group">
+    <label>Please select a country</label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select country--
+  </button>
+  <div class="dropdown-menu" id="countrydropdownMenuButton" aria-labelledby="dropdownMenuButton">
+   {{#each countries as | country |}}
+    <a data-id={{country.id}} class="dropdown-item" id="CountryDropdown" href='{{country.id}}'>{{country.Country}}</a>
+   {{/each}}
+  </div>
+ </div>
+  <div class="form-group">
+ <label>Please select a place     </label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="placedropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select city--
+  </button>
+  <div class="dropdown-menu" id="placesdropdownMenuButton" aria-labelledby="dropdownMenuButton">
+   {{#each countries.places as | place |}}
+    <a data-id={{place.id}} class="dropdown-item" href='{{place.country_id}}/places/{{place.id}}'>{{place.place_name}}</a>
+   {{/each}}
+  </div> 
+  </div>
+  <div class="form-group">
+   <label>Please select a attraction</label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="attractiondropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select attraction--
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+   {{#each countries.places.[0].attractions as | attraction |}}
+    <a data-id={{attraction.id}} class="dropdown-item" href='{{attraction.place_id}}/attractions/{{attraction.id}}'>{{attraction.attraction_name}}</a>
+   {{/each}}
+  </div>   
+  </div> 
 
-
+    <div class="form-group">
+   <label>Please select a hotel</label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="hoteldropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select hotel--
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+   {{#each countries.places.[0].attractions.[0].hotels as | hotel |}}
+    <a data-id={{hotel.id}} class="dropdown-item" href='{{hotel.attraction_id}}/hotels/{{hotel.id}}'>{{hotel.hotel_name}}</a>
+   {{/each}}
+  </div>   
+  </div> 
+  <div class="form-check">
+    <div>
+  <button id="submit">Create Itineary</button>
 </div>
+</div>
+</form>
+<script src="/js/create-Itinerary.js"></script></form>
+
+

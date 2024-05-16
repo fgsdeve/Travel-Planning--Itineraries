@@ -1,1 +1,7 @@
-module.exports = {}
+module.exports = {
+
+    get_countryid:()=>{
+
+    }
+ 
+};

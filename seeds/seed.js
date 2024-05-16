@@ -5,7 +5,7 @@ const { Countries, Places, Attractions, Hotels,Itinerary,User } = require('../mo
 const CountriesData = require('./Countries.json');
 const PlacesData = require('./Places.json');
 const AttractionsData = require('./Attractions.json');
-const HotelData = require('./Hotel.json');
+const HotelData = require('./Hotels.json');
 const ItineraryData = require('./Itinerary.json')
 const userData = require('./userData.json');
 
@@ -17,6 +17,7 @@ console.log('DB_PORT:', process.env.DB_PORT);
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
+  
   
   await User.bulkCreate(userData, {
     individualHooks: true,
