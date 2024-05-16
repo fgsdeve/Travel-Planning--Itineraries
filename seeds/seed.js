@@ -1,6 +1,10 @@
 require('dotenv').config({ path: '../.env' });
 const sequelize = require('../config/connection');
+<<<<<<< HEAD
+const { Countries,Places,Attractions,Hotels,Itinerary,User} = require('../models');
+=======
 const { Countries, Places, Attractions, Hotels,Itinerary,User } = require('../models');
+>>>>>>> 3a44026e235b9fd5058a03c1b7558c0f59a773c3
 
 const CountriesData = require('./Countries.json');
 const PlacesData = require('./Places.json');
@@ -19,6 +23,12 @@ const seedDatabase = async () => {
   await sequelize.sync({ force: true });
   
   await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  
+  await User.bulkCreate(UserData, {
     individualHooks: true,
     returning: true,
   });

@@ -2,6 +2,8 @@ const express = require('express');
 const { Itinerary, Attractions, Hotels, Countries, Places } = require('../models');
 const router = express.Router();
 
+// Example route using Itinerary and Attractions
+//user_id,country_id,place_id,attraction_id,hotel_id
 // Function to get itinerary details by ID
 async function getItineraryById(id) {
   return await Itinerary.findByPk(id, {
@@ -79,23 +81,26 @@ router.get('/:id', async (req, res) => {
 
 // Create new itinerary
 router.post('/create', async (req, res) => {
+
+  console.log(req.body.lengthOfStay);
   try {
 /*     const newItinerary = await Itinerary.create({*/ 
       await Itinerary.create({
       total_cost: req.body.total_cost,
+      lengthOfStay:req.body.lenght_Of_Stay,
       length_of_stay: req.body.length_of_stay,
       street_name: req.body.street_name,
       zip_code: req.body.zip_code,
       place_id: req.body.place_id,
       country_id: req.body.country_id,
       attraction_id: req.body.attraction_id,
+      hotel_id:req.body.hotel_id,
+      user_id:req.body.user_id
+
     });
 
-    //Attractions model
-    const attraction = await Attractions.findOne({ where: { id: req.body.attraction_id } });
-    if (attraction) {
-      console.log(`Itinerary created for attraction: ${attraction.attraction_name}`);
-    }
+
+    //res.status(200).send('Your travel itinerary created succesfully');
 
     res.redirect(`/itinerary/${newItinerary.id}`);
   } catch (err) {
@@ -110,15 +115,36 @@ router.post('/create', async (req, res) => {
   }
 }); */
 
+// // Example edit route
+// router.post('/edit/:id', async (req, res) => {
+//   try {
+//     const itinerary = await Itinerary.findOne({ where: { id: req.params.id } });
 // Edit itinerary
 router.post('/edit/:id', async (req, res) => {
   try {
     const itinerary = await Itinerary.findOne({ where: { id: req.params.id } });
 
-    if (!itinerary) {
-      return res.status(404).send('Itinerary not found');
-    }
+//     if (!itinerary) {
+//       return res.status(404).send('Itinerary not found');
+//     }
 
+//     await itinerary.update({
+//       total_cost: req.body.total_cost,
+//       lengthOfStay: req.body.lengthOfStay,
+//       street_name: req.body.street_name,
+//       zip_code: req.body.zip_code,
+//       place_id: req.body.place_id,
+//       country_id: req.body.country_id,
+//       attraction_id: req.body.attraction_id,
+//     });
+//     await itinerary.save()
+    
+//     res.redirect('/');
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).send('Server error');
+//   }
+// });
     await itinerary.update({
       total_cost: req.body.total_cost,
       length_of_stay: req.body.length_of_stay,

@@ -17,9 +17,13 @@ Itinerary.init(
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    lenghtOfStay: {
+    lenght_Of_Stay: {
         type: DataTypes.INTEGER,
+<<<<<<< HEAD
+        allowNull: true
+=======
         allowNull: false
+>>>>>>> 3a44026e235b9fd5058a03c1b7558c0f59a773c3
       },
 
      
@@ -59,6 +63,9 @@ Itinerary.init(
             key: 'id',
           },
       },
+<<<<<<< HEAD
+
+=======
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -68,6 +75,7 @@ Itinerary.init(
             key: 'id',
           },
         }
+>>>>>>> 3a44026e235b9fd5058a03c1b7558c0f59a773c3
   },
   {
     sequelize,
