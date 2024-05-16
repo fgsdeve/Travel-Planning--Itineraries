@@ -3,13 +3,13 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-/* const routes = require('./controllers');*/
+const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
-const authController = require('./controllers/authController');
+/* const authController = require('./controllers/authController');
 const userController = require('./controllers/userController');
-const itineraryController = require('./controllers/itineraryController');
+const itineraryController = require('./controllers/itineraryController'); */
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,6 +41,7 @@ app.use(session({
  res.render('main');
  });
 
+ app.use(routes);
 // app.get('/login', (req, res) => {
 //   res.render('login');
 // });
@@ -58,10 +59,10 @@ app.use(session({
 // });
 
 
-// Use controllers for routes
+/* // Use controllers for routes
 app.use('/auth', authController);
 app.use('/user', userController);
-app.use('/itinerary', itineraryController);
+app.use('/itinerary', itineraryController); */
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

@@ -1,5 +1,5 @@
 const express = require('express');
-const { Itinerary, Attractions, Hotel, Countries, Places } = require('../models');
+const { Itinerary, Attractions, Hotels, Countries, Places } = require('../models');
 const router = express.Router();
 
 // Function to get itinerary details by ID
@@ -10,18 +10,26 @@ async function getItineraryById(id) {
       { model: Countries, as: 'country' },
       { model: Places, as: 'place' },
       { model: Attractions, as: 'attraction' },
-      { model: Hotel, as: 'hotel' }
+      { model: Hotels, as: 'hotel' }
     ]
   });
 }
 
 // Get all itineraries
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-    const itineraries = await Itinerary.findAll({
-      include: [{ model: Attractions }, { model: Hotel }, { model: Countries }, { model: Places }],
+    const ItineraryData = await Itinerary.findAll({
+      
+        where:{user_id:req.params.id},   
+        include: [{ model: Attractions }, { model: Hotels }, { model: Countries }, { model: Places }],
     });
-    res.status(200).json(itineraries);
+   // res.status(200).json(itineraries);const countriesData = await Countries.findAll();
+
+      //console.table(countriesData);
+
+      const Itinerarys = ItineraryData.map((country) => country.get({ plain: true }));
+
+      res.render('itinerary', { Itinerarys });
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
