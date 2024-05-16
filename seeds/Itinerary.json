@@ -1,0 +1,23 @@
+
+[{
+    "total_cost":2000,
+    "lenghtOfStay":5,
+    "country_id":1,
+    "place_id":1,
+    "attraction_id":1,
+    "hotel_id":1,
+    "user_id":1
+    
+},
+ 
+{
+    "total_cost":4000,
+    "lenghtOfStay":5,
+    "country_id":1,
+    "place_id":2,
+    "attraction_id":2,
+    "hotel_id":2,
+    "user_id":2
+}
+ 
+] 
