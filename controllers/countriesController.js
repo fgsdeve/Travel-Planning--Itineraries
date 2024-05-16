@@ -129,45 +129,12 @@ router.get(['/by/:countryid','/'], async (req, res) => {
   
   router.get('/:countryid/places/:placeId/attractions/:attractionId/hotels/:hotelId', async (req, res) => {
     try {
-     
-      const hotelData = await Countries.findOne({
-        where:{ 
-          id: req.params.countryid
-        },
-        include : [
-          {
-            model: Places, 
-            where: {
-              id: req.params.placeId
-            },
-            include: [
-              {
-                model: Attractions, 
-                where: {
-                  id: req.params.attractionId
-                },
-                include: [
-                  {
-                    model: Hotels, 
-                    where: {
-                      id: req.params.hotelId
-                    },
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }); 
-
-
-     const countries =  hotelData.get({ plain: true });
-     //console.log(countries.places[0].attractions[0].hotels);
-      res.render('create', { countries });
-
-
-
-     
+      // Get all attractions, for the  given city
+      const HotelData = await Hotels.findAll({
+        where:{attraction_id:req.params.attractionId}
+    });
+    console.table(HotelData);
+      res.status(200).json(HotelData);
     } catch (err) {
       res.status(500).json(err);
     }

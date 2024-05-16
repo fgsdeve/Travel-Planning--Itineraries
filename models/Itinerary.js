@@ -19,7 +19,11 @@ Itinerary.init(
     },
     lenght_Of_Stay: {
         type: DataTypes.INTEGER,
+<<<<<<< HEAD
         allowNull: true
+=======
+        allowNull: false
+>>>>>>> 3a44026e235b9fd5058a03c1b7558c0f59a773c3
       },
 
      
@@ -59,7 +63,19 @@ Itinerary.init(
             key: 'id',
           },
       },
+<<<<<<< HEAD
 
+=======
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            // This references the `attraction` model, which we set in `attraction.js` as its `modelName` property
+            model: 'user',
+            key: 'id',
+          },
+        }
+>>>>>>> 3a44026e235b9fd5058a03c1b7558c0f59a773c3
   },
   {
     sequelize,
