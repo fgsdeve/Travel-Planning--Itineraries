@@ -41,21 +41,20 @@ app.use(routes);
  res.render('main');
  });
 
-// app.get('/login', (req, res) => {
-//   res.render('login');
-// });
+  app.get('/login', (req, res) => {
+  res.render('login');
+ });
 
-// app.get('/register', (req, res) => {
-//   res.render('register');
-// });
+app.get('/register', (req, res) => {
+   res.render('register');});
 
-// app.get('/create', (req, res) => {
-//   res.render('create');
-// });
+app.get('/create', (req, res) => {
+res.render('create');
+});
 
-// app.get('/edit', (req, res) => {
-//   res.render('edit');
-// });
+app.get('/edit', (req, res) => {
+res.render('edit');
+});
 
 
 /* // Use controllers for routes
