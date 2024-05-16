@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Countries, Places, Attractions, Hotel } = require('../models');
+const { Countries, Places, Attractions, Hotels } = require('../models');
 
 // router.get('/', async (req, res) => {
 //     try {
@@ -58,7 +58,7 @@ router.get('/', async (req, res) => {
   router.get('/attraction/:attractionId', async (req, res) => {
     try {
       // Get all attractions, for the  given city
-      const HotelData = await Hotel.findAll({
+      const HotelData = await Hotels.findAll({
         where:{attraction_id:req.params.attractionId}
     });
     console.table(HotelData);

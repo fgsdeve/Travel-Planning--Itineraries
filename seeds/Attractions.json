@@ -3,8 +3,6 @@
     "attraction_name": "Tower bridge in London",
     "street_name":"Tower Bridge Rd,London SE! 2UP, United Kingdom",
      "place_id": 1
-
-
 },
  
 {
@@ -20,6 +18,36 @@
      "place_id":1
  },
  {
+   "attraction_name": "Akihabara",
+   "street_name":"Sotokanda, Chiyoda 101-0021 Tokyo",
+   "place_id":2
+},
+{
+   "attraction_name": "Peace Memorial Park",
+   "street_name":"Hiroshima, Naka Ward,Nakajimacho, Japan",
+   "place_id":2
+},
+{
+   "attraction_name": "Arashiyama Bamboo Forest",
+   "street_name":"Sagaogurayama Tabuchiyamacho,Ukyo ward,Kyota,Japan",
+   "place_id":2
+},
+{
+   "attraction_name": "Royal Grand palace Bankgkok Temples",
+   "street_name":"Phra Borom Maha Ratchawang,Phra Nakon,Bangkok,Thailand",
+   "place_id":3
+},
+{
+   "attraction_name": "James Bond Island with Canoeing",
+   "street_name":"Thailand AO Phang Nga National Park",
+   "place_id":3
+},
+{
+   "attraction_name": "JPhi Phi islands Adventure Day trip",
+   "street_name":"JPhi Phi islands",
+   "place_id":3
+},
+ {
     "attraction_name": "Berlin Wall",
     "street_name":"west Berlin",
     "place_id":4
@@ -33,37 +61,6 @@
     "attraction_name": "Palmengarten",
     "street_name":"Palmengarten der Stadt,SiesmayerstrBe 63,60323 Frank am main,Germany",
     "place_id":4
- },
- {
-    "attraction_name": "Akihabara",
-    "street_name":"Sotokanda, Chiyoda 101-0021 Tokyo",
-    "place_id":2
- },
- {
-    "attraction_name": "Peace Memorial Park",
-    "street_name":"Hiroshima, Naka Ward,Nakajimacho, Japan",
-    "place_id":2
- },
- {
-    "attraction_name": "Arashiyama Bamboo Forest",
-    "street_name":"Sagaogurayama Tabuchiyamacho,Ukyo ward,Kyota,Japan",
-    "place_id":2
- },
- {
-    "attraction_name": "Royal Grand palace Bankgkok Temples",
-    "street_name":"Phra Borom Maha Ratchawang,Phra Nakon,Bangkok,Thailand",
-    "place_id":3
- },
- {
-    "attraction_name": "James Bond Island with Canoeing",
-    "street_name":"Thailand AO Phang Nga National Park",
-    "place_id":3
- },
- {
-    "attraction_name": "JPhi Phi islands Adventure Day trip",
-    "street_name":"JPhi Phi islands",
-    "place_id":3
  }
-
 
 ]

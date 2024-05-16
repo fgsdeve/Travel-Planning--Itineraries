@@ -23,12 +23,13 @@ Places.init(
                   // This references the `countries` model, which we set in `countries.js` as its `modelName` property
                   model: 'countries',
                   key: 'id',
-                },
-            },
-           
-      
-        },
-    {
+                }
+              },
+              city_image_url: {
+                type: DataTypes.STRING,
+                allowNull: false
+              }
+            }, {
         sequelize,
         timestamps: false,
        // freezeTableName: true,

@@ -1,52 +1,63 @@
-[{
-    "place_name": "London",
-    "country_id": 1
-},
+[
+   {
+     "place_name": "London",
+     "country_id": 1,
+     "city_image_url": "/images/LondonBridge.jpg"
+   },
+   {
+     "place_name": "Cambridge",
+     "country_id": 1,
+     "city_image_url": "/images/CambridgeUni.jpg"
+   },
+   {
+     "place_name": "Manchester",
+     "country_id": 1,
+     "city_image_url": "/images/ManchesterMuseum.jpg"
+   },
+   {
+     "place_name": "Tokyo",
+     "country_id": 2,
+     "city_image_url": "/images/Tokyo.jpg"
+   },
+   {
+     "place_name": "Hiroshima",
+     "country_id": 2,
+     "city_image_url": "/images/Hiroshima.jpg"
+   },
+   {
+     "place_name": "Kyoto",
+     "country_id": 2,
+     "city_image_url": "/images/Kyoto.jpg"
+   },
+   {
+     "place_name": "Bangkok",
+     "country_id": 3,
+     "city_image_url": "/images/Bangkok.jpg"
+   },
+   {
+     "place_name": "Phuket",
+     "country_id": 3,
+     "city_image_url": "/images/Phuket.jpg"
+   },
+   {
+     "place_name": "Chiang Mai",
+     "country_id": 3,
+     "city_image_url": "/images/ChiangMai.jpg"
+   },
+   {
+     "place_name": "Berlin",
+     "country_id": 4,
+     "city_image_url": "/images/Berlin.jpg"
+   },
+   {
+     "place_name": "Munich",
+     "country_id": 4,
+     "city_image_url": "/images/Munich.jpg"
+   },
+   {
+     "place_name": "Frankfurt",
+     "country_id": 4,
+     "city_image_url": "/images/Frankfurt.jpg"
+   }
+ ]
  
-{
-    "place_name": "Manchester",
-    "country_id": 1
- },
- 
-{
-    "place_name": "Cambridge",
-    "country_id": 1
- },
- {
-    "place_name": "Tokyo",
-    "country_id": 2
- },
- {
-    "place_name": "Hiroshima",
-    "country_id": 2
- },
- {
-    "place_name": "Kyoto",
-    "country_id": 2
- },
- {
-    "place_name": "Bangkok",
-    "country_id": 3
- },
- {
-    "place_name": "Phuket",
-    "country_id": 3
- },
- {
-    "place_name": "Krabri",
-    "country_id": 3
- },
- {
-    "place_name": "Munich",
-    "country_id": 4
- },
- {
-    "place_name": "Berlin",
-    "country_id": 4
- },
- {
-    "place_name": "Frankfurt",
-    "country_id": 4
- }
-
-]
