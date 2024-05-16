@@ -1,4 +1,6 @@
+
 const router = require('express').Router();
+
 const { Countries, Places, Attractions, Hotels } = require('../models');
 
 const {Op}=require("sequelize");

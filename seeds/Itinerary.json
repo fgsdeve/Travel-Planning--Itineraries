@@ -1,36 +1,23 @@
 
 [{
     "total_cost":2000,
-    "lenghtOfStay":5,
+    "lenght_Of_Stay":5,
     "country_id":1,
     "place_id":1,
     "attraction_id":1,
-<<<<<<< HEAD
-    "hotel_id":1
-=======
     "hotel_id":1,
     "user_id":1
->>>>>>> 3a44026e235b9fd5058a03c1b7558c0f59a773c3
     
 },
  
 {
     "total_cost":4000,
-    "lenghtOfStay":5,
+    "lenght_Of_Stay":5,
     "country_id":1,
     "place_id":2,
     "attraction_id":2,
-<<<<<<< HEAD
-    "hotel_id":2
-}
- 
-
-
-]
-=======
     "hotel_id":2,
     "user_id":2
 }
  
 ] 
->>>>>>> 3a44026e235b9fd5058a03c1b7558c0f59a773c3
