@@ -1,12 +1,13 @@
 require('dotenv').config({ path: '../.env' }); // Ensure dotenv is configured before using environment variables
 const sequelize = require('../config/connection');
-const { Countries,Places,Attractions,Hotels,Itinerary} = require('../models');
+const { Countries,Places,Attractions,Hotels,Itinerary,User} = require('../models');
 
 const CountriesData = require('./Countries.json');
 const PlacesData = require('./Places.json');
 const AttractionsData = require('./Attractions.json');
 const HotelData = require('./Hotels.json');
 const ItineraryData = require('./Itinerary.json');
+const UserData = require('./userData.json');
 
 console.log('DB_NAME:', process.env.DB_NAME);
 console.log('DB_USER:', process.env.DB_USER);
@@ -17,6 +18,12 @@ console.log('DB_PORT:', process.env.DB_PORT);
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
+
+  
+  await User.bulkCreate(UserData, {
+    individualHooks: true,
+    returning: true,
+  });
 
   await Countries.bulkCreate(CountriesData, {
     individualHooks: true,

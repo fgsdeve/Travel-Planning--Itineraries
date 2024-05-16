@@ -1,50 +1,56 @@
-<div class="itineary-card">
-  
-  {{countries.[0].Country}}
- {{places}}
-</div>
 
-<div class="dropdown">
-  <label>Please select a country</label>
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<form>
+   <div class="form-group">
+    <label>Please select a country</label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
      --select country--
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-menu" id="countrydropdownMenuButton" aria-labelledby="dropdownMenuButton">
    {{#each countries as | country |}}
-    <a data-id={{country.id}} class="dropdown-item" href='by/{{country.id}}'>{{country.Country}}</a>
+    <a data-id={{country.id}} class="dropdown-item" id="CountryDropdown" href='{{country.id}}'>{{country.Country}}</a>
    {{/each}}
   </div>
- 
-   <label>Please select a place</label>
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="PlacedropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     --select place--
+ </div>
+  <div class="form-group">
+ <label>Please select a place     </label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="placedropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     --select city--
   </button>
-  <div class="dropdown-menu" id="PlacesdropdownMenuButton" aria-labelledby="dropdownMenuButton">
-   
-
-  
-  {{!-- </div>
-   
-  <label>Please select a attraction</label>
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <div class="dropdown-menu" id="placesdropdownMenuButton" aria-labelledby="dropdownMenuButton">
+   {{#each countries.places as | place |}}
+    <a data-id={{place.id}} class="dropdown-item" href='{{place.country_id}}/places/{{place.id}}'>{{place.place_name}}</a>
+   {{/each}}
+  </div> 
+  </div>
+  <div class="form-group">
+   <label>Please select a attraction</label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="attractiondropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
      --select attraction--
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-   {{#each countries as | country |}}
-    <a data-id={{country.id}} class="dropdown-item" href="#">{{country.Country}}</a>
+   {{#each countries.places.[0].attractions as | attraction |}}
+    <a data-id={{attraction.id}} class="dropdown-item" href='{{attraction.place_id}}/attractions/{{attraction.id}}'>{{attraction.attraction_name}}</a>
    {{/each}}
-  </div>
-  <label>Please select a hotel</label>
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  </div>   
+  </div> 
+
+    <div class="form-group">
+   <label>Please select a hotel</label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="hoteldropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
      --select hotel--
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-   {{#each countries as | country |}}
-    <a data-id={{country.id}} class="dropdown-item" href="#">{{country.Country}}</a>
+   {{#each countries.places.[0].attractions.[0].hotels as | hotel |}}
+    <a data-id={{hotel.id}} class="dropdown-item" href='{{hotel.attraction_id}}/hotels/{{hotel.id}}'>{{hotel.hotel_name}}</a>
    {{/each}}
-  </div> --}}
-</div>
-<div>
+  </div>   
+  </div> 
+  <div class="form-check">
+    <div>
   <button id="submit">Create Itineary</button>
 </div>
-<script src="/js/create-Itinerary.js"></script>
+</div>
+</form>
+<script src="/js/create-Itinerary.js"></script></form>
+
+

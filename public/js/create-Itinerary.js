@@ -1,57 +1,26 @@
 
-//const Dish = require('');
+const country=document.getElementById(countrydropdownMenuButton);
 
-const placesDropdown = document.getElementById("PlacesdropdownMenuButton");
+   const createItinerary =  async(event) => {
 
-// const getPlaces = async (event) => {
-//     // Stop the browser from submitting the form so we can do so with JavaScript
-//     event.preventDefault();
-//     console.log(event);
-//     const pathName=document.location.pathname;
-//     let lastChar = pathName[pathName.length - 1];
    
-//     const response = await fetch('/countries/${lastChar}');
-//     const places=  await response.json();
-     
-//     console.log(places);
-
-//     //for (let i=0;i<=places.length-1;i++){
-//       var anchor = document.createElement("a");
-//         anchor.setAttribute('data-id', 1);
-//         anchor.setAttribute('href', "janani");
-//         anchor.setAttribute('class', 'dropdown-item');
-//         placesDropdown.appendChild(anchor);
-  
-//   //  }
-  
-//   };
-
-
-  const getPlaces =  (event) => {
-    // Stop the browser from submitting the form so we can do so with JavaScript
-    event.preventDefault();
-    console.log(event);
+  event.preventDefault();
     
-   
+    const response = await fetch('/itinerary/create', {
+      method: 'POST',
+      body: JSON.stringify({total_cost:5000, lengthOfStay:5,user_id:1,country_id:1,place_id:1,attraction_id:1,hotel_id:1 }),
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-    //for (let i=0;i<=places.length-1;i++){
-      const anchor = document.createElement("a");
-      
-        anchor.setAttribute('data-id', 1);
-        anchor.setAttribute('href', "#janani");
-        anchor.setAttribute('class', 'dropdown-item');
-        anchor.setAttribute('text', 'dropdown-item');
-        placesDropdown.appendChild(anchor);
-
-  alert("hi");
-  //  }
-  
-  };
+    if (response.ok) {
+      alert('Itinerary created successfully');
+    } else {
+      alert('Please try again later!');
+    }
+  }
 
 
-  document
-    .querySelector('#dropdownMenuButton')
-    .addEventListener('hide.bs.dropdown', getPlaces);
-  
-
+    document
+    .querySelector('#submit')
+    .addEventListener('click', createItinerary);
 
