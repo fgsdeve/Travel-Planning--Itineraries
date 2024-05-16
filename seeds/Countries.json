@@ -1,18 +1,26 @@
-
-[{
-    "Country": "England"
-},
- 
-{
-    "Country": "Japan"
- },
- 
-{
-    "Country": "Thailand"
- },
- {
-    "Country": "Germany"
- }
-
-
+[
+  {
+    "country": "England",
+    "flag_url": "/images/FlagEngland.png",
+    "city_image_url": "/images/LondonBridge.jpg",
+    "passport_stamp_url": "/images/EnglandStamp.png"
+  },
+  {
+    "country": "Japan",
+    "flag_url": "/images/FlagJapan.png",
+    "city_image_url": "/images/Tokyo.jpg",
+    "passport_stamp_url": "/images/JapanStamp.png"
+  },
+  {
+    "country": "Thailand",
+    "flag_url": "/images/FlagThailand.png",
+    "city_image_url": "/images/Bangkok.jpg",
+    "passport_stamp_url": "/images/ThailandStamp.png"
+  },
+  {
+    "country": "Germany",
+    "flag_url": "/images/FlagGermany.png",
+    "city_image_url": "/images/Berlin.jpg",
+    "passport_stamp_url": "/images/GermanyStamp.png"
+  }
 ]

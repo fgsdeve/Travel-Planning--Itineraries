@@ -1,35 +1,70 @@
 const User = require('./User');
-const Countries = require('./Countries');
-const Places = require('./Places');
 const Attractions = require('./Attractions');
+const Countries = require('./Countries');
 const Hotel = require('./Hotel');
 const Itinerary = require('./Itinerary');
+const Places = require('./Places');
 
-Countries.hasMany(Places, { 
+// Associations
+Countries.hasMany(Places, {
   foreignKey: 'country_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE',
 });
 
 Places.belongsTo(Countries, {
   foreignKey: 'country_id',
 });
 
-Places.hasMany(Attractions, { 
+Places.hasMany(Attractions, {
   foreignKey: 'place_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE',
 });
 
 Attractions.belongsTo(Places, {
   foreignKey: 'place_id',
 });
 
-Attractions.hasMany(Hotel, { 
+Attractions.hasMany(Hotel, {
   foreignKey: 'attraction_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE',
 });
 
 Hotel.belongsTo(Attractions, {
   foreignKey: 'attraction_id',
 });
 
-module.exports = { User, Countries, Places, Attractions, Hotel, Itinerary };
+Countries.hasMany(Itinerary, {
+  foreignKey: 'country_id',
+  onDelete: 'CASCADE',
+});
+
+Itinerary.belongsTo(Countries, {
+  foreignKey: 'country_id',
+});
+
+Places.hasMany(Itinerary, {
+  foreignKey: 'place_id',
+  onDelete: 'CASCADE',
+});
+
+Itinerary.belongsTo(Places, {
+  foreignKey: 'place_id',
+});
+
+Attractions.hasMany(Itinerary, {
+  foreignKey: 'attraction_id',
+  onDelete: 'CASCADE',
+});
+
+Itinerary.belongsTo(Attractions, {
+  foreignKey: 'attraction_id',
+});
+
+module.exports = {
+  User,
+  Attractions,
+  Countries,
+  Hotel,
+  Itinerary,
+  Places,
+};
