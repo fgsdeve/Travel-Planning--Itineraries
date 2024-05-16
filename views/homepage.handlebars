@@ -1,5 +1,7 @@
+
 <header>
-    {{{header}}}
+  <!--header handle bar is our nav bar this includes the login handlebar-->
+  {{> header}}
 </header>
 
 <div>
@@ -8,21 +10,21 @@
 
 <!-- Another register button-->
   <div>
-    {{> register}} {{{register}}}
+  {{> register}}
   </div>
 <!-- Add Description of Website-->
-  <div class="aboutUs">
+  <div class="aboutUs" id="aboutUs">
     <h2>Welcome to Trip Happens!</h2>
-    <p>Traveling has always been a popular activity, whether for leisure, business, or exploration. However, planning a trip can often be time-consuming and overwhelming, requiring coordination of various aspects such as flights, accommodations, transportation, activities, and budgets. In the past, travelers relied heavily on travel agents, guidebooks, and word-of-mouth recommendations to plan their trips. Now with Trip Happens, you can select Countries, Cities, Places to visit, and more.  From there, we will generate an itinerary just for you that will include the cost of the trip.</p>
+    <p>Traveling has always been a popular activity, whether for leisure, business, or exploration. However, planning a trip can often be time-consuming and overwhelming, requiring coordination with various aspects such as flights, accommodations, transportation, activities, and budgets. In the past, travelers relied heavily on travel agents, guidebooks, and word-of-mouth recommendations to plan their trips. Now with Trip Happens, you can select countries, cities, attractions, and more.  From there, we will generate an itinerary just for you that will include the cost of the trip.</p>
   </div>
  
   <!--Video Walkthrough -->
-  <div class="videoGuide">
+  <div class="videoGuide" id="videoGuide">
     <!--Insert video here-->
   </div>
 
   <!-- Sign up -->
-  <div class="register">
+  <div class="register" id="register">
     <h2>Ready for your next trip? Register below to get started.</h2>
-      {{> register}} {{{register}}}
+    {{> register}}
   </div>
