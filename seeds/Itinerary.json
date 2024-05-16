@@ -1,7 +1,7 @@
 [
     {
         "total_cost": 4000,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 1,
         "place_id": 1,
         "attraction_id": 1,
@@ -10,7 +10,7 @@
     },
     {
         "total_cost": 2000,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 1,
         "place_id": 2,
         "attraction_id": 3,
@@ -19,7 +19,7 @@
     },
     {
         "total_cost": 3200,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 1,
         "place_id": 3,
         "attraction_id": 2,
@@ -28,7 +28,7 @@
     },
     {
         "total_cost": 4500,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 2,
         "place_id": 4,
         "attraction_id": 4,
@@ -37,7 +37,7 @@
     },
     {
         "total_cost": 3100,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 2,
         "place_id": 5,
         "attraction_id": 5,
@@ -46,7 +46,7 @@
     },
     {
         "total_cost": 2900,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 2,
         "place_id": 6,
         "attraction_id": 6,
@@ -55,7 +55,7 @@
     },
     {
         "total_cost": 2900,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 3,
         "place_id": 7,
         "attraction_id": 7,
@@ -64,7 +64,7 @@
     },
     {
         "total_cost": 3155,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 3,
         "place_id": 8,
         "attraction_id": 8,
@@ -73,7 +73,7 @@
     },
     {
         "total_cost": 2399,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 3,
         "place_id": 9,
         "attraction_id": 9,
@@ -82,7 +82,7 @@
     },
     {
         "total_cost": 3700,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 4,
         "place_id": 10,
         "attraction_id": 10,
@@ -91,7 +91,7 @@
     },
     {
         "total_cost": 3500,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 4,
         "place_id": 11,
         "attraction_id": 11,
@@ -100,7 +100,7 @@
     },
     {
         "total_cost": 3700,
-        "lenghtOfStay": 5,
+        "length_Of_Stay": 5,
         "country_id": 4,
         "place_id": 12,
         "attraction_id": 12,
