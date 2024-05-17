@@ -7,7 +7,8 @@ const {Op}=require("sequelize");
 
 //match with get request "/countries/"
 
-router.get(['/by/:countryid','/'], async (req, res) => {
+//router.get(['/by/:countryid','/'], async (req, res) => {
+  router.get('/', async (req, res) => {
     try {
       // Get all users, sorted by name
       const countriesData = await Countries.findAll();

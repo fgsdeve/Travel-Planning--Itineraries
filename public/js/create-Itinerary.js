@@ -22,7 +22,10 @@ const country=document.getElementById(countrydropdownMenuButton);
     });
 
     if (response.ok) {
-      alert('Itinerary created successfully');
+     // alert('Itinerary created successfully');
+
+     document.location.replace('/itinerary/25');
+
     } else {
       alert('Please try again later!');
     }

@@ -13,7 +13,7 @@
   <div class="dropdown-menu" id="countrydropdownMenuButton" aria-labelledby="dropdownMenuButton">
    {{#each countries as | country |}}
   
-    <a data-id={{country.id}} class="dropdown-item" id="CountryDropdown" href='{{country.id}}'>{{country.country}}</a>
+    <a data-id={{country.id}} class="dropdown-item" id="CountryDropdown" href='/countries/{{country.id}}'>{{country.country}}</a>
    {{/each}}
   </div>
  </div>
@@ -55,6 +55,7 @@
    {{/each}}
   </div>   
   </div> 
+   <br>
   <div class="form-check">
     <div>
   <button id="submit">Create Itineary</button>

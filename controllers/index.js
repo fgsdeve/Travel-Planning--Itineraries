@@ -3,6 +3,10 @@ const router = require('express').Router();
 //const homeRoutes = require('./home-routes.js');
 const countriesRoutes = require('./countriesController.js');
 
+router.get('/', async (req, res) => {
+    res.render('homepage');
+})
+
 //router.use('/', homeRoutes);
 router.use('/countries', countriesRoutes);
 const authController = require('./authController');
@@ -12,3 +16,4 @@ router.use('/auth', authController);
 router.use('/user', userController);
 router.use('/itinerary', itineraryController);
 module.exports = router;
+
