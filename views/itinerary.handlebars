@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <header></header>
+  {{!-- <header></header> --}}
  {{!--  {{> header}} --}}
   <main class="container">
     <h1>Itinerary</h1>
@@ -17,8 +17,8 @@
         <ol>
           <li>Country: {{country}}</li><br>
           <li>City: {{city}}</li><br>
-{{!--      <li>Attraction: {{attraction}}</li><br>
- --}}     <li>Hotel: {{hotel}}</li><br>
+          <li>Attraction: {{attraction}}</li><br>
+          <li>Hotel: {{hotel}}</li><br>
           <li>Length of stay: {{length_of_stay}} days</li><br>
           <li>Estimated cost: ${{estimated_cost}}</li><br>
         </ol>
@@ -31,22 +31,21 @@
         <div class="city">
           <img src="{{city_image_url}}" alt="City picture">
         </div>
-        {{!-- <div class="attraction">
-          <img src="{{attraction_image_url}}" alt="Attraction picture">
-        </div> --}}
+        <div class="attraction">
+        </div>
         <div class="passport-stamp">
           <img src="{{passport_stamp_url}}" alt="Passport stamp">
         </div>
       </div>
     </div>
   </main>
-
+</header>
   <footer>
     <p>© 2024 Trip Happens!</p>
   </footer>
 
   {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+   {{!--  <script src="/js/logout.js"></script> --}}
   {{/if}}
   <script src="/js/script.js"></script>
 </body>
