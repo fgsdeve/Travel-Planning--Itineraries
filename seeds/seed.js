@@ -5,7 +5,7 @@ const { Countries, Places, Attractions, Hotels,Itinerary,User } = require('../mo
 const CountriesData = require('./Countries.json');
 const PlacesData = require('./Places.json');
 const AttractionsData = require('./Attractions.json');
-const HotelData = require('./Hotels.json');
+const HotelData = require('./Hotel.json');
 const ItineraryData = require('./Itinerary.json')
 const userData = require('./userData.json');
 
