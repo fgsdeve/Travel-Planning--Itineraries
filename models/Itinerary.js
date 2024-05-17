@@ -64,7 +64,7 @@ Itinerary.init(
         allowNull: false,
         references: {
             // This references the `attraction` model, which we set in `attraction.js` as its `modelName` property
-            model: 'user',
+            model: 'users',
             key: 'id',
           },
         }
