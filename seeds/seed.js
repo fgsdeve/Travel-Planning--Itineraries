@@ -1,10 +1,6 @@
 require('dotenv').config({ path: '../.env' });
 const sequelize = require('../config/connection');
-<<<<<<< HEAD
-const { Countries,Places,Attractions,Hotels,Itinerary,User} = require('../models');
-=======
 const { Countries, Places, Attractions, Hotels,Itinerary,User } = require('../models');
->>>>>>> 099b1acee19f50e23a0768c0e49c513e75927439
 
 const CountriesData = require('./Countries.json');
 const PlacesData = require('./Places.json');

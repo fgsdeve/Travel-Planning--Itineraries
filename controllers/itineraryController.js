@@ -82,12 +82,11 @@ router.get('/:id', async (req, res) => {
 // Create new itinerary
 router.post('/create', async (req, res) => {
 
-  console.log(req.body.lengthOfStay);
+  console.log(req.body.length_of_stay);
   try {
 /*     const newItinerary = await Itinerary.create({*/ 
-      await Itinerary.create({
+const newItinerary = await Itinerary.create({
       total_cost: req.body.total_cost,
-      lengthOfStay:req.body.lenght_Of_Stay,
       length_of_stay: req.body.length_of_stay,
       street_name: req.body.street_name,
       zip_code: req.body.zip_code,
@@ -101,7 +100,7 @@ router.post('/create', async (req, res) => {
 
 
     //res.status(200).send('Your travel itinerary created succesfully');
-
+    console.log(newItinerary.id);
     res.redirect(`/itinerary/${newItinerary.id}`);
   } catch (err) {
     console.error(err);
