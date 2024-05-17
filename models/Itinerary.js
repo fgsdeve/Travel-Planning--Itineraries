@@ -17,9 +17,9 @@ Itinerary.init(
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    lenght_Of_Stay: {
+    length_Of_Stay: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
       },
 
      

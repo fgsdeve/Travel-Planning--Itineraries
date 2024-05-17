@@ -5,10 +5,19 @@ const country=document.getElementById(countrydropdownMenuButton);
 
    
   event.preventDefault();
-    
+    console.log(document.location.pathname);
+
+    const pathname = document.location.pathname;
+    const paths= pathname.split("/");
+    const country_id= paths[2];
+    const place_id= paths[4];
+    const attraction_id=paths[6];
+    const hotel_id=paths[8];
+    console.log(`country :${country_id} || place :${place_id }|| attraction:${attraction_id}||hotel: ${hotel_id }`);
+
     const response = await fetch('/itinerary/create', {
       method: 'POST',
-      body: JSON.stringify({total_cost:5000, lengthOfStay:5,user_id:1,country_id:1,place_id:1,attraction_id:1,hotel_id:1 }),
+      body: JSON.stringify({total_cost:5000,length_of_stay:5,user_id:1,country_id:country_id,place_id:place_id,attraction_id:attraction_id,hotel_id:hotel_id }),
       headers: { 'Content-Type': 'application/json' },
     });
 

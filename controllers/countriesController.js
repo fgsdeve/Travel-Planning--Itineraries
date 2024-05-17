@@ -16,6 +16,8 @@ router.get(['/by/:countryid','/'], async (req, res) => {
 
       const countries = countriesData.map((country) => country.get({ plain: true }));
 
+      console.log(countries);
+
       res.render('create', { countries });
 
       //res.status(200).json(countriesData);
@@ -131,30 +133,47 @@ router.get(['/by/:countryid','/'], async (req, res) => {
   
   router.get('/:countryid/places/:placeId/attractions/:attractionId/hotels/:hotelId', async (req, res) => {
     try {
-      // Get all attractions, for the  given city
-      const HotelData = await Hotels.findAll({
-        where:{attraction_id:req.params.attractionId}
-    });
-    console.table(HotelData);
-      res.status(200).json(HotelData);
+     
+      const hotelData = await Countries.findOne({
+        where:{ 
+          id: req.params.countryid
+        },
+        include : [
+          {
+            model: Places, 
+            where: {
+              id: req.params.placeId
+            },
+            include: [
+              {
+                model: Attractions, 
+                where: {
+                  id: req.params.attractionId
+                },
+                include: [
+                  {
+                    model: Hotels, 
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }); 
+
+
+     const countries =  hotelData.get({ plain: true });
+     console.log(countries.places[0].attractions[0].hotels);
+      res.render('create', { countries });
+
+
+
+     
     } catch (err) {
       res.status(500).json(err);
     }
   });
 
-
-  // router.get('/attraction/:attractionId', async (req, res) => {
-  //   try {
-  //     // Get all attractions, for the  given city
-  //     const HotelData = await Hotels.findAll({
-  //       where:{attraction_id:req.params.attractionId}
-  //   });
-  //   console.table(HotelData);
-  //     res.status(200).json(HotelData);
-  //   } catch (err) {
-  //     res.status(500).json(err);
-  //   }
-  // });
   
   
   
