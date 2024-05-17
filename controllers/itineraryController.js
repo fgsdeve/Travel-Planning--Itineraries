@@ -98,10 +98,12 @@ const newItinerary = await Itinerary.create({
 
     });
 
+    console.log(`New itinerary ${newItinerary.id}`);
 
-    //res.status(200).send('Your travel itinerary created succesfully');
-    console.log(newItinerary.id);
     res.redirect(`/itinerary/${newItinerary.id}`);
+
+    
+
   } catch (err) {
     console.error(err);
     res.status(500).send('Server error');
