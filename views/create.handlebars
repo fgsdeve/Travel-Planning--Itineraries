@@ -4,6 +4,8 @@
 
    
    <div class="form-group">
+ <br>
+
     <label>Please select a country</label>
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
      --select country--
@@ -11,10 +13,12 @@
   <div class="dropdown-menu" id="countrydropdownMenuButton" aria-labelledby="dropdownMenuButton">
    {{#each countries as | country |}}
   
-    <a data-id={{country.id}} class="dropdown-item" id="CountryDropdown" href='{{country.id}}'>{{country.Country}}</a>
+    <a data-id={{country.id}} class="dropdown-item" id="CountryDropdown" href='{{country.id}}'>{{country.country}}</a>
    {{/each}}
   </div>
  </div>
+ <br>
+
   <div class="form-group">
  <label>Please select a place     </label>
     <button class="btn btn-secondary dropdown-toggle" type="button" id="placedropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,6 +30,8 @@
    {{/each}}
   </div> 
   </div>
+
+   <br>
   <div class="form-group">
    <label>Please select a attraction</label>
     <button class="btn btn-secondary dropdown-toggle" type="button" id="attractiondropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,7 +43,7 @@
    {{/each}}
   </div>   
   </div> 
-
+ <br>
     <div class="form-group">
    <label>Please select a hotel</label>
     <button class="btn btn-secondary dropdown-toggle" type="button" id="hoteldropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
