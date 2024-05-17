@@ -97,12 +97,12 @@ const newItinerary = await Itinerary.create({
       user_id:req.body.user_id
 
     });
+    res.status(200).json(newItinerary);
+    //console.log(`New itinerary ${newItinerary.id}`);
 
-    console.log(`New itinerary ${newItinerary.id}`);
+    //res.redirect(`/itinerary/${newItinerary.id}`);
 
-    res.redirect(`/itinerary/${newItinerary.id}`);
-
-    
+    //res.json(newItinerary);
 
   } catch (err) {
     console.error(err);

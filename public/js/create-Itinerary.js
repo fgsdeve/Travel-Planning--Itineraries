@@ -23,8 +23,10 @@ const country=document.getElementById(countrydropdownMenuButton);
 
     if (response.ok) {
      // alert('Itinerary created successfully');
-
-     document.location.replace('/itinerary/25');
+    const newItinerary=await response.json();
+   console.log(newItinerary);
+    // document.location.replace('/itinerary/25');
+     document.location.replace(`/itinerary/${newItinerary.id}`);
 
     } else {
       alert('Please try again later!');
