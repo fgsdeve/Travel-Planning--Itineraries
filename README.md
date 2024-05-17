@@ -14,7 +14,7 @@
 
 Traveling has always been a popular activity, whether for leisure, business, or exploration. However, planning a trip can often be time-consuming and overwhelming, requiring coordination of various aspects such as flights, accommodations, transportation, activities, and budgets. In the past, travelers relied heavily on travel agents, guidebooks, and word-of-mouth recommendations to plan their trips. Now with Trip Happens, you can select Countries, Cities, Places to visit, and more.  From there, we will generate an itinerary just for you that will include the cost of the trip.
 
-## User Story
+
 
 
 ## Technologies & Resources Used
@@ -118,15 +118,19 @@ Unsplash
     https://unsplash.com/@tbix45
 
 ## Collaboration
-Janana 
+Janani
 Franc 
 Parker 
 Samantha 
 
+## Acknowledgements
+We would like to thank the following people for assisting us with issues we had during this project.  Rachel and Ian our amazing teachers! J.D., Sam's friend who helped us debug a few issues. 
+We would like to also give recognition to each other for all our hard work we put into this project.  It was an amazing opportunity to work with one another and watch how we came together as a team to come up with this application.  It may not be perfect, but we are very proud of the work we accomplished.
+
 ## License
 MIT
 
-## Screenshots
-
 
 ## Live URL
+
+ https://github.com/fgsdeve/Travel-Planning--Itineraries
